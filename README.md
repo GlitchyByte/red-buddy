@@ -1,8 +1,8 @@
 # Red Buddy
 
-![Version](https://img.shields.io/badge/Version-1.0-blue)
+![Version](https://img.shields.io/badge/Version-1.1-blue)
 
-Chrome extension for [YouTube](https://youtube.com/) auto-skip of ads. **This is NOT an ad-blocker**, it will simply press `skip` when it's available.
+Chrome extension for [YouTube](https://youtube.com/) auto-skip of ads. **This is NOT an ad-blocker**, it will simply press `skip` when it's available. It will also press `dismiss` on trial popups, and `close` on on-screen banner ads.
 
 ---
 ## Installing from source
@@ -22,6 +22,4 @@ Then:
 ---
 ## How to use
 
-Just click on it to enable the extension (you should see the skip icon turn white) and your are golden.
-
-No more manually clicking skip ad, or manually dismissing those pesky trial popups that show up and cut off a portion of the video.
+Just click on it to enable the extension (you should see the skip icon turn white) and your are set.

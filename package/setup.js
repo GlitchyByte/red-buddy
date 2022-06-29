@@ -24,6 +24,8 @@ if (document.querySelector("#player") && !window.glitchyByteMainFrameContext) {
                     if (a) a.click()
                     const d = document.querySelector("#dismiss-button > a")
                     if (d) d.click()
+                    const o = document.querySelector("button.ytp-ad-overlay-close-button")
+                    if (o) o.click()
                 }, 3000)
                 sendResponse({ iconOn: true })
             } else {
