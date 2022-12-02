@@ -20,10 +20,13 @@ if (document.querySelector("#player") && !window.glitchyByteMainFrameContext) {
         toggle(request, sendResponse) {
             if (this.timerId == null) {
                 this.timerId = setInterval(() => {
+                    // Skip ad.
                     const a = document.querySelector("button.ytp-ad-skip-button")
                     if (a) a.click()
-                    const d = document.querySelector("#dismiss-button > a")
+                    // Dismiss offer.
+                    const d = document.querySelector("#dismiss-button")
                     if (d) d.click()
+                    // Ad overlay.
                     const o = document.querySelector("button.ytp-ad-overlay-close-button")
                     if (o) o.click()
                 }, 3000)
