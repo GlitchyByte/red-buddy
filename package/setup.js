@@ -26,9 +26,12 @@ if (document.querySelector("#player") && !window.glitchyByteMainFrameContext) {
                     // Dismiss offer.
                     const d = document.querySelector("#dismiss-button")
                     if (d) d.click()
-                    // Ad overlay.
+                    // Dismiss ad overlay.
                     const o = document.querySelector("button.ytp-ad-overlay-close-button")
                     if (o) o.click()
+                    // Dismiss Premium offer.
+                    const p = document.querySelector("#dismiss-button .cbox")
+                    if (p) p.click()
                 }, 3000)
                 sendResponse({ iconOn: true })
             } else {
