@@ -1,46 +1,35 @@
-// Copyright 2022 GlitchyByte
+// Copyright 2022-2023 GlitchyByte
 // SPDX-License-Identifier: MIT-0
 
 // Embedded setup.
 
-if (document.querySelector("#player") && !window.glitchyByteMainFrameContext) {
-    // Define.
-    class GlitchyByteMainFrameContext {
-
-        constructor() {
-            this.timerId = null
-            const listener = (request, sender, sendResponse) => {
-                switch (request.message) {
-                    case "toggle": return this.toggle(request, sendResponse)
-                }
+if (document.querySelector("#player") && !window.glitchyByteRedBuddyContext) {
+  window.glitchyByteRedBuddyContext = {
+    timerId: null
+  }
+  const listener = (request, sender, sendResponse) => {
+    const context = window.glitchyByteRedBuddyContext
+    const selectors = [
+      "button.ytp-ad-skip-button-modern",   // Skip ad.
+      "#dismiss-button"                     // Dismiss offer and premium offer.
+    ]
+    if (request.message === "toggle") {
+      if (context.timerId === null) {
+        context.timerId = setInterval(() => {
+          for (const selector of selectors) {
+            const element = document.querySelector(selector)
+            if (element) {
+              element.click()
             }
-            chrome.runtime.onMessage.addListener(listener.bind(this))
-        }
-
-        toggle(request, sendResponse) {
-            if (this.timerId == null) {
-                this.timerId = setInterval(() => {
-                    // Skip ad.
-                    const a = document.querySelector("button.ytp-ad-skip-button")
-                    if (a) a.click()
-                    // Dismiss offer.
-                    const d = document.querySelector("#dismiss-button")
-                    if (d) d.click()
-                    // Dismiss ad overlay.
-                    const o = document.querySelector("button.ytp-ad-overlay-close-button")
-                    if (o) o.click()
-                    // Dismiss Premium offer.
-                    const p = document.querySelector("#dismiss-button .cbox")
-                    if (p) p.click()
-                }, 3000)
-                sendResponse({ iconOn: true })
-            } else {
-                clearInterval(this.timerId)
-                this.timerId = null
-                sendResponse({ iconOn: false })
-            }
-        }
+          }
+        }, 3000)
+        sendResponse({ iconOn: true })
+      } else {
+        clearInterval(context.timerId)
+        context.timerId = null
+        sendResponse({ iconOn: false })
+      }
     }
-    // Initialize.
-    window.glitchyByteMainFrameContext = new GlitchyByteMainFrameContext()
+  }
+  chrome.runtime.onMessage.addListener(listener)
 }
