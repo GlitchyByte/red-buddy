@@ -8,11 +8,11 @@ const actionListener = tab => {
 
   const click = () => {
     chrome.tabs.sendMessage(tabId, { message: "toggle" }, null, response => {
-        if (response.iconOn) {
-            setIconOn()
-        } else {
-            setIconOff()
-        }
+      if (response.iconOn) {
+        setIconOn()
+      } else {
+        setIconOff()
+      }
     })
   }
 
