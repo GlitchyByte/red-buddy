@@ -1,7 +1,7 @@
 {
   "name": "Red Buddy",
   "description": "Chrome extension for YouTube ad auto-skipping and promotion trial popup dismissal.",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "author": "GlitchyByte",
   "manifest_version": 3,
   "icons": {
