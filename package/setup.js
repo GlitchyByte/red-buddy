@@ -12,6 +12,7 @@ if (document.querySelector("#player") && !window.glitchyByteRedBuddyContext) {
     const selectors = [
       "button.ytp-ad-skip-button-modern", // Skip ad.
       "button[aria-label='Dismiss']",     // Dismiss offer.
+      "button[aria-label='No thanks']",   // Dismiss offer.
       "button[aria-label='Skip trial']"   // Dismiss Premium trial.
     ]
     if (request.message === "toggle") {
