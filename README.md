@@ -7,7 +7,7 @@ Chrome extension for auto-skipping [YouTube](https://youtube.com/) ads. **This i
 ---
 ## Install from the Chrome Web Store
 
-[Go to Chrome Web Store!](https://chrome.google.com/webstore/detail/red-buddy/djnhoajhifdcfhbbhijnpinbdkgdkppf)
+[Go to the Chrome Web Store!](https://chrome.google.com/webstore/detail/red-buddy/djnhoajhifdcfhbbhijnpinbdkgdkppf)
 
 URL: https://chrome.google.com/webstore/detail/red-buddy/djnhoajhifdcfhbbhijnpinbdkgdkppf
 
