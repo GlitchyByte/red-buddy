@@ -5,6 +5,13 @@
 Chrome extension for auto-skipping [YouTube](https://youtube.com/) ads. **This is NOT an ad-blocker**, it will simply press `skip` when it's available. It will also press `dismiss` on trial popups.
 
 ---
+## Install from the Chrome Web Store
+
+[Go to Chrome Web Store!](https://chrome.google.com/webstore/detail/red-buddy/djnhoajhifdcfhbbhijnpinbdkgdkppf)
+
+URL: https://chrome.google.com/webstore/detail/red-buddy/djnhoajhifdcfhbbhijnpinbdkgdkppf
+
+---
 ## Installing from source
 
 Clone the repository:
