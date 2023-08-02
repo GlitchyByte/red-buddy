@@ -11,9 +11,7 @@ if (document.querySelector("#player") && !window.glitchyByteRedBuddyContext) {
     const context = window.glitchyByteRedBuddyContext
     const selectors = [
       "button.ytp-ad-skip-button-modern", // Skip ad.
-      "button[aria-label='Dismiss']",     // Dismiss offer.
-      "button[aria-label='No thanks']",   // Dismiss offer.
-      "button[aria-label='Skip trial']"   // Dismiss Premium trial.
+      "yt-button-renderer#dismiss-button button" // Dismiss big popups.
     ]
     if (request.message === "toggle") {
       if (context.timerId === null) {
