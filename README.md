@@ -1,6 +1,6 @@
 # Red Buddy
 
-![Version](https://img.shields.io/badge/Version-1.4.4-blue)
+![Version](https://img.shields.io/badge/Version-1.4.5-blue)
 
 Chrome extension for auto-skipping [YouTube](https://youtube.com/) ads. **This is NOT an ad-blocker**, it will simply press `skip` when it's available. It will also press `dismiss` on trial popups.
 

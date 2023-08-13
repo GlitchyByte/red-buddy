@@ -10,7 +10,12 @@ if (document.querySelector("#player") && !window.glitchyByteRedBuddyContext) {
   const listener = (request, sender, sendResponse) => {
     const context = window.glitchyByteRedBuddyContext
     const selectors = [
-      "button.ytp-ad-skip-button-modern", // Skip ad.
+      // Old.
+      "button.ytp-ad-skip-button",               // Skip ad.
+      "#dismiss-button",                         // Dismiss offer.
+      "#dismiss-button .cbox",                   // Dismiss Premium offer.
+      // New.
+      "button.ytp-ad-skip-button-modern",        // Skip ad.
       "yt-button-renderer#dismiss-button button" // Dismiss big popups.
     ]
     if (request.message === "toggle") {

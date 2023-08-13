@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Red Buddy",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "description": "Auto-dismisses popups and auto-skips ads on YouTube. THIS IS NOT AN AD BLOCKER.",
   "author": "GlitchyByte",
   "icons": {
