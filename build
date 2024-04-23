@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Copyright 2024 GlitchyByte
+# SPDX-License-Identifier: MIT-0
+
+zip -r red-buddy.zip package

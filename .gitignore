@@ -4,3 +4,6 @@
 
 # Local raw assets.
 /assets/
+
+# Artifact.
+/red-buddy.zip
