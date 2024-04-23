@@ -1,4 +1,4 @@
-// Copyright 2022-2023 GlitchyByte
+// Copyright 2022-2024 GlitchyByte
 // SPDX-License-Identifier: MIT-0
 
 // Embedded setup.
@@ -11,12 +11,14 @@ if (document.querySelector("#player") && !window.glitchyByteRedBuddyContext) {
     const context = window.glitchyByteRedBuddyContext
     const selectors = [
       // Old.
-      "button.ytp-ad-skip-button",               // Skip ad.
-      "#dismiss-button",                         // Dismiss offer.
-      "#dismiss-button .cbox",                   // Dismiss Premium offer.
-      // New.
-      "button.ytp-ad-skip-button-modern",        // Skip ad.
-      "yt-button-renderer#dismiss-button button" // Dismiss big popups.
+      "button.ytp-ad-skip-button",                // Skip ad.
+      "#dismiss-button",                          // Dismiss offer.
+      "#dismiss-button .cbox",                    // Dismiss Premium offer.
+      // New (not anymore).
+      "button.ytp-ad-skip-button-modern",         // Skip ad.
+      "yt-button-renderer#dismiss-button button", // Dismiss big popups.
+      // 04-2024
+      "[id^='skip-button']"                       // Skip ad.
     ]
     if (request.message === "toggle") {
       if (context.timerId === null) {
@@ -27,7 +29,7 @@ if (document.querySelector("#player") && !window.glitchyByteRedBuddyContext) {
               element.click()
             }
           }
-        }, 3000)
+        }, 2000)
         sendResponse({ iconOn: true })
       } else {
         clearInterval(context.timerId)
